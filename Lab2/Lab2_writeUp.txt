@@ -1,0 +1,3 @@
+The code runs without issues, but when velocity is < 0, the code throws an IllegalArgumentException and continues running until the program is done.
+
+When I swap the 0 and 5, the function stops running after the first error and exits with the exception. However, the program still finishes running as evident by the exit code 0. 
