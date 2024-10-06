@@ -50,6 +50,9 @@ public abstract class Account implements IAccount {
     return this.balance;
   }
 
+  /**
+   * Performs the monthly maintenance function by deducting fees and setting numtransctions to 0
+   */
   public void performMonthlyMaintenance() {
     balance = balance - feesDue;
     NumOfTransactions = 0;
