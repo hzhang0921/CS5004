@@ -33,24 +33,24 @@ public class SalariedEmployee implements IEmployee {
   /**
    * Constructs a new SalariedEmployee with the specified details.
    *
-   * @param name The name of the employee.
-   * @param id The unique identifier of the employee.
-   * @param yearlySalary The yearly salary of the employee.
+   * @param eName The name of the employee.
+   * @param eId The unique identifier of the employee.
+   * @param eYearlySalary The yearly salary of the employee.
    * @throws IllegalArgumentException If the yearly salary is invalid.
    */
-  public SalariedEmployee(String name, String id, double yearlySalary)
+  public SalariedEmployee(String eName, String eId, double eYearlySalary)
       throws IllegalArgumentException {
-    if (name == null || id == null || name.trim().isEmpty()
-        || id.trim().isEmpty()) {
+    if (eName == null || eId == null || eName.trim().isEmpty()
+        || eId.trim().isEmpty()) {
       throw new IllegalArgumentException(
           "Name and ID must not be null, empty, or whitespace.");
     }
-    if (yearlySalary < 0 || yearlySalary > MAX_YEARLY_SALARY) {
+    if (eYearlySalary  < 0 || eYearlySalary  > MAX_YEARLY_SALARY) {
       throw new IllegalArgumentException("Invalid yearly salary.");
     }
-    this.name = name;
-    this.id = id;
-    this.yearlySalary = new BigDecimal(yearlySalary)
+    this.name = eName;
+    this.id = eId;
+    this.yearlySalary = new BigDecimal(eYearlySalary)
         .setScale(2, RoundingMode.HALF_UP)
         .doubleValue();
   }
@@ -125,8 +125,7 @@ public class SalariedEmployee implements IEmployee {
       return false;
     }
     SalariedEmployee that = (SalariedEmployee) o;
-    return Double.compare(that.yearlySalary, yearlySalary) == 0
-        && Objects.equals(name, that.name)
+    return Objects.equals(name, that.name)
         && Objects.equals(id, that.id);
   }
 

@@ -54,30 +54,30 @@ public class HourlyEmployee implements IEmployee {
   /**
    * Constructs a new HourlyEmployee with the specified details.
    *
-   * @param name The name of the employee.
-   * @param id The unique identifier of the employee.
-   * @param hourlySalary The hourly rate of pay for the employee.
-   * @param normalHours The normal number of hours worked per week.
+   * @param eName The name of the employee.
+   * @param eId The unique identifier of the employee.
+   * @param eHourlySalary The hourly rate of pay for the employee.
+   * @param eNormalHours The normal number of hours worked per week.
    * @throws IllegalArgumentException if input parameters are invalid.
    */
-  public HourlyEmployee(String name, String id, double hourlySalary,
-                        double normalHours) throws IllegalArgumentException {
-    if (name == null || id == null || name.trim().isEmpty()
-        || id.trim().isEmpty()) {
+  public HourlyEmployee(String eName, String eId, double eHourlySalary,
+                        double eNormalHours) throws IllegalArgumentException {
+    if (eName == null || eId == null || eName.trim().isEmpty()
+        || eId.trim().isEmpty()) {
       throw new IllegalArgumentException(
           "Name and ID must not be null, empty, or whitespace.");
     }
-    if (hourlySalary > MAX_HOURLY_SALARY || hourlySalary < MIN_HOURLY_SALARY
-        || normalHours > MAX_HOURS || normalHours < MIN_HOURS) {
+    if (eHourlySalary > MAX_HOURLY_SALARY || eHourlySalary < MIN_HOURLY_SALARY
+        || eNormalHours > MAX_HOURS || eNormalHours < MIN_HOURS) {
       throw new IllegalArgumentException("Invalid employee information.");
     }
 
-    this.name = name;
-    this.id = id;
-    this.hourlySalary = new BigDecimal(hourlySalary)
+    this.name = eName;
+    this.id = eId;
+    this.hourlySalary = new BigDecimal(eHourlySalary)
         .setScale(2, RoundingMode.HALF_UP)
         .doubleValue();
-    this.normalHours = new BigDecimal(normalHours)
+    this.normalHours = new BigDecimal(eNormalHours)
         .setScale(2, RoundingMode.HALF_UP)
         .doubleValue();
     this.useSpecialHours = false;
@@ -184,9 +184,7 @@ public class HourlyEmployee implements IEmployee {
       return false;
     }
     HourlyEmployee that = (HourlyEmployee) o;
-    return Double.compare(that.hourlySalary, hourlySalary) == 0
-        && Double.compare(that.normalHours, normalHours) == 0
-        && Objects.equals(name, that.name)
+    return Objects.equals(name, that.name)
         && Objects.equals(id, that.id);
   }
 

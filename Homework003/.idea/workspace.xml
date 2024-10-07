@@ -5,29 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99fb6e79-7bcd-47c9-b5a5-31574e1361c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homework003.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/HourlyEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/IEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/IEmployeeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/student/SalariedEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/Homework03.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/src/student/AbstractEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/src/student/HourlyEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/src/student/IEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/src/student/IEmployeeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/src/student/SalariedEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework3/src/student/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework3/src/student/HourlyEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework3/src/student/HourlyEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework3/src/student/IEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework3/src/student/IEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework3/src/student/IEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework3/src/student/IEmployeeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework3/src/student/SalariedEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework3/src/student/SalariedEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab04-A/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab04-A/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab04-A/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab04-A/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab04-A/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab04-A/Lab04.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab04-A/src/sensorcomp/AtmosphericSensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab04-A/src/sensorcomp/IDiscreteSensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab04-A/src/sensorcomp/ISensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab04-A/src/sensorcomp/SensorData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab04-A/src/sensorcomp/WaterSensor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/HourlyEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/HourlyEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/SalariedEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/SalariedEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4/.idea/checkstyle-idea.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab4/Lab04.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +41,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2n5kRatjBs7wAdWdsP66a9tqGPD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,7 +52,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.IEmployeeTest.executor": "Run",
+    "JUnit.IEmployeeTest.executor": "Coverage",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -76,6 +73,28 @@
       <recent name="student" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="IEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homework003" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="student.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="student" />
+      <option name="MAIN_CLASS_NAME" value="student.IEmployeeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.IEmployeeTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -93,10 +112,16 @@
       <option name="presentableId" value="Default" />
       <updated>1728270317591</updated>
       <workItem from="1728270318571" duration="3481000" />
+      <workItem from="1728338296988" duration="1673000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Homework003$IEmployeeTest.ic" NAME="IEmployeeTest Coverage Results" MODIFIED="1728339681372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>student.*</FILTER>
+    </SUITE>
   </component>
 </project>
