@@ -15,34 +15,45 @@ public class SalariedEmployee implements IEmployee {
   /** The number of pay periods per year for salaried employees (12 months). */
   public static final int PAY_PERIODS = 12;
 
+  /** The maximum allowable raise percentage. */
+  public static final double MAX_RAISE_PERCENT = 10.0;
+
+  /** Percentage divisor for calculating raises. */
+  public static final double PERCENT_DIVISOR = 100.0;
+
+  /** The name of the employee. */
   private String name;
+
+  /** The ID of the employee. */
   private String id;
+
+  /** The yearly salary of the employee. */
   private double yearlySalary;
 
   /**
    * Constructor for creating a SalariedEmployee.
    *
-   * @param employeeName the name of the employee.
-   * @param employeeId the ID of the employee.
-   * @param baseYearlySalary the yearly salary of the employee.
+   * @param name the name of the employee.
+   * @param id the ID of the employee.
+   * @param yearlySalary the yearly salary of the employee.
    */
-  public SalariedEmployee(String employeeName, String employeeId, double baseYearlySalary) {
-    if (employeeName == null || employeeId == null
-        || employeeName.isEmpty() || employeeId.isEmpty()) {
+  public SalariedEmployee(String name, String id, double yearlySalary) {
+    if (name == null || id == null
+        || name.isEmpty() || id.isEmpty()) {
       throw new IllegalArgumentException("Name and ID cannot be null or empty.");
     }
-    if (baseYearlySalary < 0
-        || baseYearlySalary > MAX_YEARLY_SALARY) {
+    if (yearlySalary < 0 || yearlySalary > MAX_YEARLY_SALARY) {
       throw new IllegalArgumentException("Yearly salary must be between 0 and "
           + MAX_YEARLY_SALARY);
     }
-    this.name = employeeName;
-    this.id = employeeId;
-    this.yearlySalary = baseYearlySalary;
+    this.name = name;
+    this.id = id;
+    this.yearlySalary = yearlySalary;
   }
 
   /**
    * Copy constructor for salaried employee.
+   *
    * @param other salaried employee that is to be copied.
    */
   public SalariedEmployee(SalariedEmployee other) {
@@ -73,7 +84,7 @@ public class SalariedEmployee implements IEmployee {
    */
   @Override
   public double getBaseSalary() {
-    return yearlySalary;
+    return this.yearlySalary;
   }
 
   /**
@@ -83,12 +94,13 @@ public class SalariedEmployee implements IEmployee {
    */
   @Override
   public void giveRaiseByPercent(double raisePercent) {
-    if (raisePercent < 0 || raisePercent > 10) {
-      throw new IllegalArgumentException("Raise percent must be between 0 and 10.");
+    if (raisePercent < 0 || raisePercent > MAX_RAISE_PERCENT) {
+      throw new IllegalArgumentException("Raise percent must be between 0 and "
+          + MAX_RAISE_PERCENT + ".");
     }
-    yearlySalary *= (1 + raisePercent / 100);
+    yearlySalary *= (1 + raisePercent / PERCENT_DIVISOR);
     if (yearlySalary > MAX_YEARLY_SALARY) {
-      yearlySalary = MAX_YEARLY_SALARY; // Enforce maximum salary
+      yearlySalary = MAX_YEARLY_SALARY;  // Enforce maximum salary
     }
   }
 
@@ -99,7 +111,7 @@ public class SalariedEmployee implements IEmployee {
    */
   @Override
   public String getID() {
-    return id;
+    return this.id;
   }
 
   /**
@@ -109,32 +121,18 @@ public class SalariedEmployee implements IEmployee {
    */
   @Override
   public String getName() {
-    return name;
+    return this.name;
   }
 
   @Override
   public String toString() {
-    return "Name: " + name + "\nID: " + id + "\nBase Salary: $" + yearlySalary;
-  }
-
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj) {
-      return true;  // If both references are the same
-    }
-    if (obj == null || getClass() != obj.getClass()) {
-      return false;  // If the other object is null or not of the same class
-    }
-    SalariedEmployee other = (SalariedEmployee) obj;
-    // Compare relevant fields to determine equality
-    return Double.compare(yearlySalary, other.yearlySalary) == 0
-        && name.equals(other.name)
-        && id.equals(other.id);
-  }
-
-  @Override
-  public int hashCode() {
-    // Generate a hash code based on the fields used in equals()
-    return Objects.hash(name, id, yearlySalary);
+    System.out.println(String.format("Name: %s%nID: %s%nBase Salary: $%.2f",
+        getName(),
+        getID(),
+        getBaseSalary()));
+    return String.format("Name: %s %nID: %s %nBase Salary: $%.2f",
+        getName(),
+        getID(),
+        getBaseSalary());
   }
 }
