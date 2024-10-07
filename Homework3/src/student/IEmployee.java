@@ -5,27 +5,27 @@ package student;
  */
 public interface IEmployee {
 
-  /** interface function to return pay period.
+  /** method for getting paid.
    * @return the employee's pay for the given period.
    */
   double getPayForThisPeriod();
 
-  /** interface function to return base salary.
+  /** method for getting base salary.
    * @return the employee's base salary.
    */
   double getBaseSalary();
 
-  /** interface function to increase salary.
+  /** method for raising percent.
    * @param raisePercent raises the employee's base salary from 0% (minimum) to 10% maximum.
    */
   void giveRaiseByPercent(double raisePercent);
 
-  /** interface function to return ID.
+  /** method for getting ID.
    * @return Returns employee ID.
    */
   String getID();
 
-  /** interface function to return name.
+  /** method for getting name.
    * @return Returns employee name.
    */
   String getName();

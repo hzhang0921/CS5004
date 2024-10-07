@@ -2,171 +2,194 @@ package student;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Objects;
 
 /**
- * Represents an hourly employee.
+ * Represents an hourly employee in the system.
  */
 public class HourlyEmployee implements IEmployee {
 
-  /** The maximum number of hours an employee can work in a week. */
-  public static final double MAX_HOURS = 80.0;
+  /** The employee's name. */
+  private final String name;
 
-  /** The maximum hourly salary for an employee. */
-  public static final double MAX_HOURLY_SALARY = 50.0;
-
-  /** The standard full-time work week hours. */
-  public static final double FULL_TIME_HOURS = 40.0;
-
-  /** The overtime multiplier for employees working over full-time hours. */
-  public static final double OVERTIME_MULTIPLIER = 1.5;
-
-  /** The maximum allowable raise percentage. */
-  public static final double MAX_RAISE_PERCENT = 10.0;
-
-  /** Percentage divisor for calculating raises. */
-  public static final double PERCENT_DIVISOR = 100.0;
-
-  /** The name of the employee. */
-  private String name;
-
-  /** The ID of the employee. */
-  private String id;
+  /** The employee's ID. */
+  private final String id;
 
   /** The hourly salary of the employee. */
   private double hourlySalary;
 
-  /** The normal number of hours worked per week. */
-  private double normalHours;
+  /** The normal hours worked by the employee per week. */
+  private final double normalHours;
 
-  /** The special hours worked, overriding normal hours temporarily. */
+  /** The special hours worked by the employee, used for overtime. */
   private double specialHours;
 
+  /** Flag to indicate if special hours are used. */
+  private boolean useSpecialHours;
+
+  /** The maximum hours an employee can work. */
+  public static final double MAX_HOURS = 80.0;
+
+  /** The minimum hours an employee can work. */
+  public static final double MIN_HOURS = 0.0;
+
+  /** The maximum hourly salary for an employee. */
+  public static final double MAX_HOURLY_SALARY = 50.0;
+
+  /** The minimum hourly salary for an employee. */
+  public static final double MIN_HOURLY_SALARY = 0.0;
+
+  /** The multiplier for overtime pay. */
+  public static final double OVERTIME_MULTIPLIER = 1.5;
+
+  /** The divisor for calculating raise percentages. */
+  public static final double PERCENT_DIVISOR = 100;
+
+  /** The number of hours before overtime pay is applied. */
+  public static final double HOURS_BEFORE_SPECIAL = 40;
+
+  /** The maximum allowable percentage raise. */
+  public static final double MAX_PERCENT_INCREASE = 10;
+
   /**
-   * Constructor for creating an HourlyEmployee.
+   * Constructs a new HourlyEmployee with the specified details.
    *
-   * @param name the name of the employee.
-   * @param id the ID of the employee.
-   * @param hourlySalary the hourly salary of the employee.
-   * @param normalHours the normal number of hours the employee works in a week.
+   * @param eName The name of the employee.
+   * @param eId The unique identifier of the employee.
+   * @param eHourlySalary The hourly rate of pay for the employee.
+   * @param eNormalHours The normal number of hours worked per week.
+   * @throws IllegalArgumentException if input parameters are invalid.
    */
-  public HourlyEmployee(String name, String id,
-                        double hourlySalary, double normalHours) {
-    if (name == null || id == null
-        || name.isEmpty() || id.isEmpty()) {
-      throw new IllegalArgumentException("Name and ID cannot be null or empty.");
+  public HourlyEmployee(String eName, String eId, double eHourlySalary,
+                        double eNormalHours) throws IllegalArgumentException {
+    if (eName == null || eId == null || eName.trim().isEmpty()
+        || eId.trim().isEmpty()) {
+      throw new IllegalArgumentException(
+          "Name and ID must not be null, empty, or whitespace.");
     }
-    if (hourlySalary < 0 || hourlySalary > MAX_HOURLY_SALARY) {
-      throw new IllegalArgumentException("Hourly salary must be between 0 and "
-          + MAX_HOURLY_SALARY);
+    if (eHourlySalary > MAX_HOURLY_SALARY || eHourlySalary < MIN_HOURLY_SALARY
+        || eNormalHours > MAX_HOURS || eNormalHours < MIN_HOURS) {
+      throw new IllegalArgumentException("Invalid employee information.");
     }
-    if (normalHours < 0 || normalHours > MAX_HOURS) {
-      throw new IllegalArgumentException("Weekly hours must be between 0 and " + MAX_HOURS);
-    }
-    this.name = name;
-    this.id = id;
-    this.hourlySalary = hourlySalary;
-    this.normalHours = normalHours;
+
+    this.name = eName;
+    this.id = eId;
+    this.hourlySalary = new BigDecimal(eHourlySalary)
+        .setScale(2, RoundingMode.HALF_UP)
+        .doubleValue();
+    this.normalHours = new BigDecimal(eNormalHours)
+        .setScale(2, RoundingMode.HALF_UP)
+        .doubleValue();
+    this.useSpecialHours = false;
   }
 
   /**
    * Copy constructor for HourlyEmployee.
+   * Creates a new HourlyEmployee with the same properties as the given
+   * employee.
    *
-   * @param other is another hourlyEmployee
+   * @param other The HourlyEmployee to copy.
    */
   public HourlyEmployee(HourlyEmployee other) {
-    if (other == null) {
-      throw new IllegalArgumentException("Cannot copy from a null object.");
-    }
-    this.name = new String(other.name);
-    this.id = new String(other.id);
+    this.name = other.name;
+    this.id = other.id;
     this.hourlySalary = other.hourlySalary;
     this.normalHours = other.normalHours;
-    this.specialHours = other.specialHours;  // Copy the special hours too
-  }
-
-  /**
-   * Sets special hours temporarily overriding the normal hours worked.
-   *
-   * @param hours the special number of hours worked.
-   */
-  public void setSpecialHours(double hours) {
-    if (hours < 0 || hours > MAX_HOURS) {
-      throw new IllegalArgumentException("Special hours must be between 0 and " + MAX_HOURS);
-    }
-    this.specialHours = hours;
+    this.specialHours = other.specialHours;
+    this.useSpecialHours = other.useSpecialHours;
   }
 
   @Override
   public double getPayForThisPeriod() {
-    if (specialHours == 0 && normalHours == 0) {
-      return 0.0;
-    }
+    double hoursToUse = useSpecialHours ? specialHours : normalHours;
+    double regularHours = Math.min(hoursToUse, HOURS_BEFORE_SPECIAL);
+    double overtimeHours = Math.max(0, hoursToUse - HOURS_BEFORE_SPECIAL);
+    double regularPay = regularHours * hourlySalary;
+    double overtimePay = overtimeHours * (OVERTIME_MULTIPLIER * hourlySalary);
 
-    double hours = (specialHours != 0) ? specialHours : normalHours;
-    double overtime = (hours > FULL_TIME_HOURS) ? hours - FULL_TIME_HOURS : 0;
-
-    double regularPay = hourlySalary * Math.min(hours, FULL_TIME_HOURS);
-    double overtimePay = hourlySalary * OVERTIME_MULTIPLIER * overtime;
-
-    specialHours = 0; // Reset special hours after pay is calculated
-
-    BigDecimal totalPay = new BigDecimal(regularPay + overtimePay);
-    totalPay = totalPay.setScale(2, RoundingMode.HALF_UP);
-    return totalPay.doubleValue();
+    useSpecialHours = false; // Reset to normal hours after payment.
+    return new BigDecimal(regularPay + overtimePay)
+        .setScale(2, RoundingMode.HALF_UP)
+        .doubleValue();
   }
 
   @Override
   public double getBaseSalary() {
-    return this.hourlySalary;
+    return hourlySalary;
   }
 
+  /**
+   * Gives a raise to the employee by a percentage of their current salary.
+   *
+   * @param raisePercent The percentage to increase the salary.
+   * @throws IllegalArgumentException If the raise percent is invalid.
+   */
   @Override
-  public void giveRaiseByPercent(double raisePercent) {
-    if (raisePercent < 0 || raisePercent > MAX_RAISE_PERCENT) {
-      throw new IllegalArgumentException("Raise percent must be between 0 and "
-          + MAX_RAISE_PERCENT + ".");
+  public void giveRaiseByPercent(double raisePercent)
+      throws IllegalArgumentException {
+    if (raisePercent < 0 || raisePercent > MAX_PERCENT_INCREASE) {
+      throw new IllegalArgumentException(
+          "Raise percent must be between 0 and 10.");
     }
-    hourlySalary *= (1 + raisePercent / PERCENT_DIVISOR);
-    if (hourlySalary > MAX_HOURLY_SALARY) {
-      hourlySalary = MAX_HOURLY_SALARY;  // Enforce maximum hourly salary
+    double newSalary = new BigDecimal(hourlySalary
+        * (1 + raisePercent / PERCENT_DIVISOR))
+        .setScale(2, RoundingMode.HALF_UP)
+        .doubleValue();
+    if (newSalary <= MAX_HOURLY_SALARY) {
+      hourlySalary = newSalary;
     }
-  }
-
-  @Override
-  public String getID() {
-    return this.id;
   }
 
   @Override
   public String getName() {
-    return this.name;
+    return name;
+  }
+
+  @Override
+  public String getID() {
+    return id;
   }
 
   @Override
   public String toString() {
-    System.out.println(String.format("Name: %s%nID: %s%nBase Salary: $%.2f",
-        getName(),
-        getID(),
-        getBaseSalary()));
     return String.format("Name: %s%nID: %s%nBase Salary: $%.2f",
-        getName(),
-        getID(),
-        getBaseSalary());
+        this.getName(), this.getID(), this.getBaseSalary());
+  }
+
+  /**
+   * Sets special hours for the current pay period.
+   * This overrides the normal hours for the next pay calculation.
+   *
+   * @param hours The number of special hours to set.
+   * @throws IllegalArgumentException If the hours are outside the valid range.
+   */
+  public void setSpecialHours(double hours)
+      throws IllegalArgumentException {
+    if (hours < MIN_HOURS || hours > MAX_HOURS) {
+      throw new IllegalArgumentException(
+          "Special hours must be between 0 and 80.");
+    }
+    this.specialHours = new BigDecimal(hours)
+        .setScale(2, RoundingMode.HALF_UP)
+        .doubleValue();
+    this.useSpecialHours = true;
   }
 
   @Override
-  public boolean equals(Object obj) {
-    if (this == obj) {
-      return true;  // If both references are the same
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-    if (obj == null || getClass() != obj.getClass()) {
-      return false;  // If the other object is null or not of the same class
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
-    HourlyEmployee other = (HourlyEmployee) obj;
-    // Compare relevant fields to determine equality
-    return Double.compare(hourlySalary, other.hourlySalary) == 0
-        && Double.compare(normalHours, other.normalHours) == 0
-        && name.equals(other.name)
-        && id.equals(other.id);
+    HourlyEmployee that = (HourlyEmployee) o;
+    return Objects.equals(name, that.name)
+        && Objects.equals(id, that.id);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(name, id, hourlySalary, normalHours);
   }
 }
