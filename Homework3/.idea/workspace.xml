@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="99fb6e79-7bcd-47c9-b5a5-31574e1361c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab04-A/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab04-A/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab04-A/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab04-A/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab04-A/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab04-A/Lab04.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab04-A/src/sensorcomp/AtmosphericSensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab04-A/src/sensorcomp/IDiscreteSensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab04-A/src/sensorcomp/ISensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab04-A/src/sensorcomp/SensorData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab04-A/src/sensorcomp/WaterSensor.java" afterDir="false" />
+    <list default="true" id="0a1962fc-2203-4b24-8cd1-ab2dddc4116b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Homework03/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework03/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework03/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework03/Homework03.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4-B/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4-B/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4-B/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4-B/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4-B/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4-B/Lab4-B.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4-B/src/sensorcomp/AtmosphericSensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4-B/src/sensorcomp/IDiscreteSensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4-B/src/sensorcomp/ISensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4-B/src/sensorcomp/SensorData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab4-B/src/sensorcomp/WaterSensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReviewLab/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReviewLab/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReviewLab/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReviewLab/ReviewLab.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ReviewLab/src/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/Point2D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student/HourlyEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/HourlyEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student/SalariedEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/SalariedEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab4/.idea/checkstyle-idea.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab4/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab4/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab4/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab4/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab4/Lab04.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework003.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/IEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/IEmployeeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -44,7 +44,7 @@
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="2n5kRatjBs7wAdWdsP66a9tqGPD" />
+  <component name="ProjectId" id="2n8KHR25YFlnkOUEvU6rR5Gjrjq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,23 +59,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="student" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="IEmployeeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homework003" />
+      <module name="Homework3" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="student.*" />
@@ -106,13 +96,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="99fb6e79-7bcd-47c9-b5a5-31574e1361c2" name="Changes" comment="" />
-      <created>1728270317591</created>
+      <changelist id="0a1962fc-2203-4b24-8cd1-ab2dddc4116b" name="Changes" comment="" />
+      <created>1728349176528</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1728270317591</updated>
-      <workItem from="1728270318571" duration="3481000" />
-      <workItem from="1728338296988" duration="1673000" />
+      <updated>1728349176528</updated>
+      <workItem from="1728349177504" duration="31000" />
+      <workItem from="1728349217365" duration="22000" />
     </task>
     <servers />
   </component>
@@ -120,7 +110,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Homework003$IEmployeeTest.ic" NAME="IEmployeeTest Coverage Results" MODIFIED="1728339681372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/Homework3$IEmployeeTest.ic" NAME="IEmployeeTest Coverage Results" MODIFIED="1728349234290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>student.*</FILTER>
     </SUITE>
   </component>

@@ -1,12 +1,7 @@
 package student;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-
-
 
 /**
  * This class contains JUnit test cases to test the behavior of IEmployee implementations
@@ -20,12 +15,15 @@ public class IEmployeeTest {
   IEmployee woodStock = new SalariedEmployee("Woodstock", "33-CHIRP", 180000.50);
 
   /**
-   * Tests that the constructor throws an IllegalArgumentException when neccessary.
+   * Tests that the constructor throws an IllegalArgumentException when necessary.
    */
   @Test
   public void testGetErrorWhenCreatingEmployee() {
     assertThrows(IllegalArgumentException.class, () -> {
       IEmployee e = new HourlyEmployee(null, null, 15.51, 30);
+    });
+    assertThrows(IllegalArgumentException.class, () -> {
+      IEmployee e = new HourlyEmployee("Chris", null, 15.51, 30);
     });
     assertThrows(IllegalArgumentException.class, () -> {
       IEmployee e = new HourlyEmployee("Part-timer", "PT-TIME", -1, 30);
@@ -97,7 +95,7 @@ public class IEmployeeTest {
 
     // Test max raise (10%)
     snoopyHours.giveRaiseByPercent(10);
-    assertEquals(20.2125, snoopyHours.getBaseSalary(), 0.01);  // Ensure salary is updated correctly
+    assertEquals(20.2125, snoopyHours.getBaseSalary(), 0.01);
 
     // Test exceeding raise limit (>10%)
     assertThrows(IllegalArgumentException.class, () -> {
@@ -117,8 +115,7 @@ public class IEmployeeTest {
   public void testZeroHoursPay() {
     // Test for 0 hours worked for HourlyEmployee
     snoopyHours.setSpecialHours(0);
-    snoopyHours = new HourlyEmployee("Snoopy",
-        "111-CHLY-BRWN", 17.50, 0);  // Reset snoopyHours with 0 normal hours
+    snoopyHours = new HourlyEmployee("Snoopy", "111-CHLY-BRWN", 17.50, 0);
     assertEquals(0, snoopyHours.getPayForThisPeriod());
 
     // Test for 0 hours worked for SalariedEmployee (still gets their monthly salary)
@@ -155,9 +152,169 @@ public class IEmployeeTest {
    */
   @Test
   public void testMaxSalaryForSalariedEmployee() {
-    // Test for edge case where salary is close to the max
     SalariedEmployee highEarner = new SalariedEmployee("Rich", "999", 999999);
     highEarner.giveRaiseByPercent(5);  // Should not exceed max salary of 1000000
     assertEquals(1000000, highEarner.getBaseSalary());  // Capped at max salary
+  }
+
+  /**
+   * Tests the copy constructor for both SalariedEmployee and HourlyEmployee.
+   */
+  @Test
+  public void testCopyConstructor() {
+    // Test for SalariedEmployee
+    SalariedEmployee originalSalaried = new SalariedEmployee("Jane Doe", "54321", 60000.00);
+    SalariedEmployee copySalaried = new SalariedEmployee(originalSalaried);
+    assertEquals(originalSalaried.getName(), copySalaried.getName(), "Name should be the same");
+    assertEquals(originalSalaried.getID(), copySalaried.getID(), "ID should be the same");
+    assertEquals(originalSalaried.getBaseSalary(), copySalaried.getBaseSalary(), 0.001,
+        "Yearly salary should be the same");
+    assertNotSame(originalSalaried, copySalaried, "The copied object should not be the same instance as the original");
+
+    // Test for HourlyEmployee
+    HourlyEmployee originalHourly = new HourlyEmployee("John Doe", "12345", 20.00, 40);
+    HourlyEmployee copyHourly = new HourlyEmployee(originalHourly);
+    assertEquals(originalHourly.getName(), copyHourly.getName(), "Name should be the same");
+    assertEquals(originalHourly.getID(), copyHourly.getID(), "ID should be the same");
+    assertEquals(originalHourly.getBaseSalary(), copyHourly.getBaseSalary(), 0.001,
+        "Hourly salary should be the same");
+    assertNotSame(originalHourly, copyHourly, "The copied object should not be the same instance as the original");
+  }
+
+  /**
+   * Tests the toString method for SalariedEmployee.
+   */
+  @Test
+  public void testToStringSalariedEmployee() {
+    SalariedEmployee salariedEmployee = new SalariedEmployee("Jane Doe", "54321", 60000.00);
+    String expected = "Name: Jane Doe\nID: 54321\nBase Salary: $60000.00";
+    assertEquals(expected, salariedEmployee.toString(), "toString() method output is incorrect for SalariedEmployee");
+  }
+
+  /**
+   * Tests the toString method for HourlyEmployee.
+   */
+  @Test
+  public void testToStringHourlyEmployee() {
+    HourlyEmployee hourlyEmployee = new HourlyEmployee("John Doe", "12345", 20.00, 40);
+    String expected = "Name: John Doe\nID: 12345\nBase Salary: $20.00";
+    assertEquals(expected, hourlyEmployee.toString(), "toString() method output is incorrect for HourlyEmployee");
+  }
+
+  /**
+   * Tests the equals method for comparing the same object.
+   * Verifies that an object is equal to itself.
+   */
+  @Test
+  public void testEqualsSameObject() {
+    // Test for SalariedEmployee
+    SalariedEmployee salariedEmployee = new SalariedEmployee("Jane Doe", "54321", 60000.00);
+    assertEquals(salariedEmployee, salariedEmployee, "A SalariedEmployee object should be equal to itself");
+
+    // Test for HourlyEmployee
+    HourlyEmployee hourlyEmployee = new HourlyEmployee("John Doe", "12345", 20.00, 40);
+    assertEquals(hourlyEmployee, hourlyEmployee, "An HourlyEmployee object should be equal to itself");
+  }
+
+  /**
+   * Tests the equals method for comparing two identical objects.
+   * Verifies that two objects with the same fields are equal.
+   */
+  @Test
+  public void testEqualsIdenticalObject() {
+    // Test for SalariedEmployee
+    SalariedEmployee salariedEmployee1 = new SalariedEmployee("Jane Doe", "54321", 60000.00);
+    SalariedEmployee salariedEmployee2 = new SalariedEmployee("Jane Doe", "54321", 60000.00);
+    assertEquals(salariedEmployee1, salariedEmployee2, "Two identical SalariedEmployee objects should be equal");
+
+    // Test for HourlyEmployee
+    HourlyEmployee hourlyEmployee1 = new HourlyEmployee("John Doe", "12345", 20.00, 40);
+    HourlyEmployee hourlyEmployee2 = new HourlyEmployee("John Doe", "12345", 20.00, 40);
+    assertEquals(hourlyEmployee1, hourlyEmployee2, "Two identical HourlyEmployee objects should be equal");
+  }
+
+  /**
+   * Tests the equals method for comparing an object with null.
+   * Verifies that no object is equal to null.
+   */
+  @Test
+  public void testEqualsNullObject() {
+    // Test for SalariedEmployee
+    SalariedEmployee salariedEmployee = new SalariedEmployee("Jane Doe", "54321", 60000.00);
+    assertNotEquals(salariedEmployee, null, "A SalariedEmployee object should not be equal to null");
+
+    // Test for HourlyEmployee
+    HourlyEmployee hourlyEmployee = new HourlyEmployee("John Doe", "12345", 20.00, 40);
+    assertNotEquals(hourlyEmployee, null, "An HourlyEmployee object should not be equal to null");
+  }
+
+  /**
+   * Tests the equals method for comparing objects of different classes.
+   * Verifies that objects of different types are not equal.
+   */
+  @Test
+  public void testEqualsDifferentClass() {
+    // Test for SalariedEmployee
+    SalariedEmployee salariedEmployee = new SalariedEmployee("Jane Doe", "54321", 60000.00);
+    assertNotEquals(salariedEmployee, "Some String", "A SalariedEmployee object should not be equal to a different class");
+
+    // Test for HourlyEmployee
+    HourlyEmployee hourlyEmployee = new HourlyEmployee("John Doe", "12345", 20.00, 40);
+    assertNotEquals(hourlyEmployee, "Some String", "An HourlyEmployee object should not be equal to a different class");
+  }
+
+  /**
+   * Tests the equals method for comparing objects with different field values.
+   * Verifies that objects with different values are not equal.
+   */
+  @Test
+  public void testEqualsDifferentValues() {
+    // Test for SalariedEmployee
+    SalariedEmployee salariedEmployee1 = new SalariedEmployee("Jane Doe", "54321", 60000.00);
+    SalariedEmployee salariedEmployee2 = new SalariedEmployee("John Doe", "98765", 70000.00);
+    assertNotEquals(salariedEmployee1, salariedEmployee2, "SalariedEmployee objects with different values should not be equal");
+
+    // Test for HourlyEmployee
+    HourlyEmployee hourlyEmployee1 = new HourlyEmployee("John Doe", "12345", 20.00, 40);
+    HourlyEmployee hourlyEmployee2 = new HourlyEmployee("Jane Doe", "98765", 25.00, 40);
+    assertNotEquals(hourlyEmployee1, hourlyEmployee2, "HourlyEmployee objects with different values should not be equal");
+  }
+
+  /**
+   * Tests the hashCode method for two objects with the same field values.
+   * Verifies that objects with the same values have the same hash code.
+   */
+  @Test
+  public void testHashCodeSameValues() {
+    // Test for SalariedEmployee
+    SalariedEmployee salariedEmployee1 = new SalariedEmployee("Jane Doe", "54321", 60000.00);
+    SalariedEmployee salariedEmployee2 = new SalariedEmployee("Jane Doe", "54321", 60000.00);
+    assertEquals(salariedEmployee1.hashCode(), salariedEmployee2.hashCode(),
+        "Equal SalariedEmployee objects should have the same hash code");
+
+    // Test for HourlyEmployee
+    HourlyEmployee hourlyEmployee1 = new HourlyEmployee("John Doe", "12345", 20.00, 40);
+    HourlyEmployee hourlyEmployee2 = new HourlyEmployee("John Doe", "12345", 20.00, 40);
+    assertEquals(hourlyEmployee1.hashCode(), hourlyEmployee2.hashCode(),
+        "Equal HourlyEmployee objects should have the same hash code");
+  }
+
+  /**
+   * Tests the hashCode method for two objects with different field values.
+   * Verifies that objects with different values have different hash codes.
+   */
+  @Test
+  public void testHashCodeDifferentValues() {
+    // Test for SalariedEmployee
+    SalariedEmployee salariedEmployee1 = new SalariedEmployee("Jane Doe", "54321", 60000.00);
+    SalariedEmployee salariedEmployee2 = new SalariedEmployee("John Doe", "98765", 70000.00);
+    assertNotEquals(salariedEmployee1.hashCode(), salariedEmployee2.hashCode(),
+        "SalariedEmployee objects with different values should have different hash codes");
+
+    // Test for HourlyEmployee
+    HourlyEmployee hourlyEmployee1 = new HourlyEmployee("John Doe", "12345", 20.00, 40);
+    HourlyEmployee hourlyEmployee2 = new HourlyEmployee("Jane Doe", "98765", 25.00, 40);
+    assertNotEquals(hourlyEmployee1.hashCode(), hourlyEmployee2.hashCode(),
+        "HourlyEmployee objects with different values should have different hash codes");
   }
 }
