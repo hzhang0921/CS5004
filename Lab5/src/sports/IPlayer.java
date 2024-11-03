@@ -8,6 +8,6 @@ public interface IPlayer <T> {
 
   double getHeight();
 
-  T getStats(); // generic method returns status type T
+  <T> T getStats(); // generic method returns status type T
 
 }

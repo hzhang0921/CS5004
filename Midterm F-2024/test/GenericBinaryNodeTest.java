@@ -51,7 +51,7 @@ class GenericBinaryNodeTest {
 
     s = right.toString();
     assertTrue( s.contains("5") && s.contains("6"));
-    
+
     System.out.println(top.toString());
     System.out.println(right.toString());
 
@@ -83,6 +83,7 @@ class GenericBinaryNodeTest {
     org.addRight(new GenericBinaryNode<>(bordMotors));
 
     s = org.toString();
+    System.out.println(org.toString());
     assertTrue(s.contains("ScroogeMcDuck Incoporated")
             && s.contains("NorthernSouthern University")
             && s.contains("Bord Motor Company"));

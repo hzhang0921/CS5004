@@ -14,16 +14,26 @@ public class Address {
     this.street = street;
     this.city = city;
     this.zipCode = zipCode;
-    this.taxes = taxes;
+    if (taxes != null) {
+      this.taxes = new TaxLien(taxes);
+    } else {
+      this.taxes = null;
+    }
   }
 
   public Address(Address that) {
+    if (that == null) {
+      throw new IllegalArgumentException("Cannot copy from a null address");
+    }
     this.street = that.street;
     this.city = that.city;
     this.zipCode = that.zipCode;
     this.state = that.state;
-    // this.taxes = that.taxes; // Probably not what we want, but start here!! shallow copy
-    this.taxes = new TaxLien(that.taxes);
+    if (that.taxes != null) {
+      this.taxes = new TaxLien(that.taxes);
+    } else {
+      this.taxes = null;
+    }
   }
 
   public TaxLien getTaxes() {

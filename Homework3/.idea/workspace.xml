@@ -1,37 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0a1962fc-2203-4b24-8cd1-ab2dddc4116b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Homework03/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework03/Homework03.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4-B/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4-B/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4-B/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4-B/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4-B/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4-B/Lab4-B.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4-B/src/sensorcomp/AtmosphericSensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4-B/src/sensorcomp/IDiscreteSensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4-B/src/sensorcomp/ISensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4-B/src/sensorcomp/SensorData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab4-B/src/sensorcomp/WaterSensor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReviewLab/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReviewLab/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReviewLab/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReviewLab/ReviewLab.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ReviewLab/src/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/src/Point2D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Midterm F-2024/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Midterm F-2024/src/generics/TaxableEntityTaxIDComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Midterm F-2024/src/generics/TaxableEntityTaxLiabilityComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Midterm F-2024/src/inventory/BasicItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Midterm F-2024/src/inventory/Inventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Midterm F-2024/src/inventory/ProduceItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Midterm F-2024/src/nodes/GenericBinaryNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Midterm F-2024/src/taxes/Company.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Midterm F-2024/src/taxes/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Midterm F-2024/test/ICorporateTaxableEntityTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework003.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student/IEmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/IEmployeeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Midterm F-2024/Midterm F-2024.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Midterm F-2024/Midterm F-2024.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Midterm F-2024/src/taxes/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Midterm F-2024/src/taxes/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Midterm F-2024/test/GenericBinaryNodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Midterm F-2024/test/GenericBinaryNodeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +46,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/haoyang/Documents/GitHub/CS5004/Homework3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -103,6 +95,7 @@
       <updated>1728349176528</updated>
       <workItem from="1728349177504" duration="31000" />
       <workItem from="1728349217365" duration="22000" />
+      <workItem from="1729718609156" duration="3054000" />
     </task>
     <servers />
   </component>

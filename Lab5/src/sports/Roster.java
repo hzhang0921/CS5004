@@ -40,6 +40,11 @@ public class Roster <T, R> {
     // given a bi-function and a seed-value (initial value), combine all of the values from each player
     // into a single value. The value we're combining will be dependent on the bi-function passed in as a parameter
     // T and R are "formal" parameters that may be bound to 2 different concrete types
+    R result = seedValue;
+    for (int i = 0; i < players.size(); i++) {
+      result = combiner.apply(players.get(i), result);
+    }
+    return result;
   }
 
 }
