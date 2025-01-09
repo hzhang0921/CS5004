@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Homework7:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="755c2694-9d21-4d0c-af3d-07df99ff2b7f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Homework05/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/Homework05.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/src/questionnaire/AbstractQuestion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/src/questionnaire/Likert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/src/questionnaire/LikertResponseOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/src/questionnaire/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/src/questionnaire/Questionnaire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/src/questionnaire/QuestionnaireImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/src/questionnaire/ShortAnswer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/src/questionnaire/YesNo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/test/questionnaire/AbstractQuestionTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/test/questionnaire/LikertTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/test/questionnaire/QuestionnaireImplTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/test/questionnaire/ShortAnswerTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework05/test/questionnaire/YesNoTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework5/src/questionnaire/Likert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework5/src/questionnaire/QuestionnaireImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework5/src/questionnaire/ShortAnswer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework5/src/questionnaire/YesNo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework5/test/test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/Homework6.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/src/registration/AbstractVehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/src/registration/Automobile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/src/registration/BlueJurisdiction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/src/registration/Boat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/src/registration/GreenJurisdiction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/src/registration/IJurisdiction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/src/registration/IRegistration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/src/registration/IVehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/src/registration/Motorcycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/src/registration/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/src/registration/RedJurisdiction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/src/registration/Registration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/src/registration/RegistrationSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/test/registration/JurisdictionTaxCalculationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/test/registration/RegistrationSystemTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework6/test/registration/VehicleCreationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Homework7_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework7.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Homework8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/buildings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/demo_input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/hoops.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/tetris_wallpaper.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/photoAlbum/CommandFileParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/photoAlbum/Controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/photoAlbum/Model/AbstractShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/photoAlbum/Model/AlbumModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/photoAlbum/Model/IAlbumModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/photoAlbum/Model/IShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/photoAlbum/Model/ISnapshot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/photoAlbum/Model/Oval.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/photoAlbum/Model/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/photoAlbum/Model/Snapshot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/photoAlbum/PhotoAlbumMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/photoAlbum/View/GraphicalView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/photoAlbum/View/WebView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/photoAlbum/AlbumModelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/Archive.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/Homework8.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/src/buildings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/src/demo_input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/src/hoops.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/src/photoAlbum/AbstractShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/src/photoAlbum/AlbumModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/src/photoAlbum/IAlbumModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/src/photoAlbum/IShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/src/photoAlbum/ISnapshot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/src/photoAlbum/Oval.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/src/photoAlbum/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/src/photoAlbum/Snapshot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/src/teris_wallpaper.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework8/test/photoAlbum/AlbumModelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/Lab6.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/src/doubledispatch/IPlanet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/src/doubledispatch/ISpaceExplorer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/src/doubledispatch/LifeExplorer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/src/doubledispatch/Mars.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/src/doubledispatch/Mercury.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/src/doubledispatch/SimulationBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/src/doubledispatch/TerrainExplorer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/src/doubledispatch/Venus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab6/src/frequency/Analytics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/Lab7.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/src/tictactoe/FailingAppendable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/src/tictactoe/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/src/tictactoe/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/src/tictactoe/TicTacToe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/src/tictactoe/TicTacToeConsoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/src/tictactoe/TicTacToeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/src/tictactoe/TicTacToeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/test/tictactoe/TicTacToeControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab7/test/tictactoe/TicTacToeModelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab8/Lab8.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework5/Homework5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework5/Homework5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework5/src/questionnaire/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework5/src/questionnaire/Question.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2p2IaZwG6CLpevOQPepaUU2q6BJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.PhotoAlbumMain.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.AlbumModelTest.executor": "Run",
+    "JUnit.SnapshotTest.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/haoyang/Documents/GitHub/CS5004/Homework7/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/haoyang/Documents/GitHub/CS5004/Homework7/src/photoAlbum/Main.java",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$/src/photoAlbum" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="photoAlbum" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="755c2694-9d21-4d0c-af3d-07df99ff2b7f" name="Changes" comment="" />
+      <created>1731957807367</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731957807367</updated>
+      <workItem from="1731957808378" duration="17251000" />
+      <workItem from="1732565708950" duration="5377000" />
+      <workItem from="1732579670415" duration="2774000" />
+      <workItem from="1732582461284" duration="5126000" />
+      <workItem from="1732652933416" duration="1005000" />
+      <workItem from="1732653951092" duration="8682000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
